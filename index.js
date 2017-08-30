@@ -1,11 +1,13 @@
-/* Process inline math */
-/*
-Like markdown-it-simplemath, this is a stripped down, simplified version of:
-https://github.com/runarberg/markdown-it-math
+/**
+ *  markdown-it-katex plugin for markdown-it
+ *  Process inline math with KateX
 
-It differs in that it takes (a subset of) LaTeX as input and relies on KaTeX
-for rendering output.
-*/
+ *  Like markdown-it-simplemath, this is a stripped down, simplified version of:
+ *  https://github.com/runarberg/markdown-it-math
+
+ *  It differs in that it takes (a subset of) LaTeX as input and relies on KaTeX
+ *  for rendering output.
+ **/
 
 /*jslint node: true */
 'use strict';
@@ -103,7 +105,7 @@ function math_inline(state, silent) {
 function math_block(state, start, end, silent){
     var firstLine, lastLine, next, lastPos, found = false, token,
         pos = state.bMarks[start] + state.tShift[start],
-        max = state.eMarks[start]
+        max = state.eMarks[start];
 
     if(pos + 2 > max){ return false; }
     if(state.src.slice(pos,pos+2)!=='$$'){ return false; }
@@ -145,16 +147,15 @@ function math_block(state, start, end, silent){
     token = state.push('math_block', 'math', 0);
     token.block = true;
     token.content = (firstLine && firstLine.trim() ? firstLine + '\n' : '')
-    + state.getLines(start + 1, next, state.tShift[start], true)
-    + (lastLine && lastLine.trim() ? lastLine : '');
+        + state.getLines(start + 1, next, state.tShift[start], true)
+        + (lastLine && lastLine.trim() ? lastLine : '');
     token.map = [ start, state.line ];
     token.markup = '$$';
     return true;
 }
 
-module.exports = function math_plugin(md, options) {
+function markdownit_katex(md, options) {
     // Default options
-
     options = options || {};
 
     // set KaTeX as the renderer for markdown-it-simplemath
@@ -182,11 +183,11 @@ module.exports = function math_plugin(md, options) {
             if(options.throwOnError){ console.log(error); }
             return latex;
         }
-    }
+    };
 
     var blockRenderer = function(tokens, idx){
         return  katexBlock(tokens[idx].content) + '\n';
-    }
+    };
 
     md.inline.ruler.after('escape', 'math_inline', math_inline);
     md.block.ruler.after('blockquote', 'math_block', math_block, {
@@ -194,4 +195,6 @@ module.exports = function math_plugin(md, options) {
     });
     md.renderer.rules.math_inline = inlineRenderer;
     md.renderer.rules.math_block = blockRenderer;
-};
+}
+
+global.markdownit_katex = module.exports = markdownit_katex;
