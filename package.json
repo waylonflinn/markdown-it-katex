@@ -22,7 +22,7 @@
   "author": "waylonflinn@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "katex": "^0.10.0"
+    "katex": "^0.8.0"
   },
   "devDependencies": {
     "markdown-it": "^6.0.0",
