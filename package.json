@@ -3,6 +3,7 @@
   "version": "2.0.3",
   "description": "Fast math support for markdown-it with KaTeX",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "watch": "watchify browser.js -o bundle.js -v",
     "test": "jest"
