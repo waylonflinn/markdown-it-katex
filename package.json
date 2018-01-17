@@ -27,6 +27,7 @@
   "devDependencies": {
     "html": "^1.0.0",
     "jest": "^22.1.1",
-    "markdown-it": "^6.0.0"
+    "markdown-it": "^6.0.0",
+    "watchify": "^3.9.0"
   }
 }
