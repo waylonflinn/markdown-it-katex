@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "watchify browser.js -o bundle.js -v",
-    "test": "node test/all.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,11 +22,11 @@
   "author": "waylonflinn@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "katex": "^0.6.0"
+    "katex": "^0.9.0-beta"
   },
   "devDependencies": {
-    "markdown-it": "^6.0.0",
-    "markdown-it-testgen": "^0.1.4",
-    "tape": "^4.5.1"
+    "html": "^1.0.0",
+    "jest": "^22.1.1",
+    "markdown-it": "^6.0.0"
   }
 }
