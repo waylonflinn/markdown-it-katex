@@ -3,9 +3,10 @@
   "version": "2.0.3",
   "description": "Fast math support for markdown-it with KaTeX",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "watch": "watchify browser.js -o bundle.js -v",
-    "test": "node test/all.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,12 @@
   "author": "waylonflinn@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "katex": "^0.6.0"
+    "katex": "^0.9.0-beta"
   },
   "devDependencies": {
+    "html": "^1.0.0",
+    "jest": "^22.1.1",
     "markdown-it": "^6.0.0",
-    "markdown-it-testgen": "^0.1.4",
-    "tape": "^4.5.1"
+    "watchify": "^3.9.0"
   }
 }

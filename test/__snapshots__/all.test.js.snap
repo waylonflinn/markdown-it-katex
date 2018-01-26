@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`markdown-it-katex Block math can be indented up to 3 spaces 1`] = `
+"<p><span class=\\"katex-display\\"><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding=\\"application/x-tex\\">1+1 = 2
+</annotation></semantics></math></span><span class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span>
+  <span
+  class=\\"strut bottom\\" style=\\"height:0.72777em;vertical-align:-0.08333em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span><span class=\\"mbin\\">+</span>
+    <span
+    class=\\"mord\\">1</span><span class=\\"mrel\\">=</span><span class=\\"mord\\">2</span></span>
+      </span>
+      </span>
+      </span>
+</p>"
+`;
+
+exports[`markdown-it-katex But 4 means a code block 1`] = `
+"<pre><code>$$
+1+1 = 2
+$$</code></pre>
+"
+`;
+
+exports[`markdown-it-katex Display and inline math can appear in lists 1`] = `
+"<ul>
+  <li><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding=\\"application/x-tex\\">1+1 = 2</annotation></semantics></math></span>
+    <span
+    class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span><span class=\\"strut bottom\\"
+      style=\\"height:0.72777em;vertical-align:-0.08333em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span>
+      <span
+      class=\\"mbin\\">+</span><span class=\\"mord\\">1</span><span class=\\"mrel\\">=</span><span class=\\"mord\\">2</span></span>
+        </span>
+        </span>
+  </li>
+  <li>
+    <p><span class=\\"katex-display\\"><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding=\\"application/x-tex\\">1+1 = 2
+</annotation></semantics></math></span><span class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span>
+      <span
+      class=\\"strut bottom\\" style=\\"height:0.72777em;vertical-align:-0.08333em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span><span class=\\"mbin\\">+</span>
+        <span
+        class=\\"mord\\">1</span><span class=\\"mrel\\">=</span><span class=\\"mord\\">2</span></span>
+          </span>
+          </span>
+          </span>
+    </p>
+  </li>
+</ul>"
+`;
+
+exports[`markdown-it-katex Display math can be written in one line 1`] = `
+"<p><span class=\\"katex-display\\"><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding=\\"application/x-tex\\">1+1 = 2
+</annotation></semantics></math></span><span class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span>
+  <span
+  class=\\"strut bottom\\" style=\\"height:0.72777em;vertical-align:-0.08333em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span><span class=\\"mbin\\">+</span>
+    <span
+    class=\\"mord\\">1</span><span class=\\"mrel\\">=</span><span class=\\"mord\\">2</span></span>
+      </span>
+      </span>
+      </span>
+</p>"
+`;
+
+exports[`markdown-it-katex Display math self-closes at the end of document 1`] = `
+"<p><span class=\\"katex-display\\"><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding=\\"application/x-tex\\">1+1 = 2
+</annotation></semantics></math></span><span class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span>
+  <span
+  class=\\"strut bottom\\" style=\\"height:0.72777em;vertical-align:-0.08333em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span><span class=\\"mbin\\">+</span>
+    <span
+    class=\\"mord\\">1</span><span class=\\"mrel\\">=</span><span class=\\"mord\\">2</span></span>
+      </span>
+      </span>
+      </span>
+</p>"
+`;
+
+exports[`markdown-it-katex Escaped delimiters in math mode 1`] = `
+"<p>Money adds: $$X + $Y = <span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mi>Z</mi></mrow><annotation encoding=\\"application/x-tex\\">Z</annotation></semantics></math></span>
+  <span
+  class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.68333em;\\"></span><span class=\\"strut bottom\\"
+    style=\\"height:0.68333em;vertical-align:0em;\\"></span><span class=\\"base\\"><span class=\\"mord mathit\\" style=\\"margin-right:0.07153em;\\">Z</span></span>
+    </span>
+    </span>.</p>"
+`;
+
+exports[`markdown-it-katex Escaped delimiters should not render math 1`] = `
+"<p>Foo <span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding=\\"application/x-tex\\">1</annotation></semantics></math></span>
+  <span
+  class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span><span class=\\"strut bottom\\"
+    style=\\"height:0.64444em;vertical-align:0em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span></span>
+    </span>
+    </span>bar</p>
+<p><span class=\\"katex-display\\"><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding=\\"application/x-tex\\">1
+</annotation></semantics></math></span><span class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span>
+  <span
+  class=\\"strut bottom\\" style=\\"height:0.64444em;vertical-align:0em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span></span>
+    </span>
+    </span>
+    </span>
+</p>"
+`;
+
+exports[`markdown-it-katex Even when it starts with a negative sign 1`] = `
+"<p>foo<span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mo>−</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding=\\"application/x-tex\\">-1+1 = 2</annotation></semantics></math></span>
+  <span
+  class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span><span class=\\"strut bottom\\"
+    style=\\"height:0.72777em;vertical-align:-0.08333em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">−</span>
+    <span
+    class=\\"mord\\">1</span><span class=\\"mbin\\">+</span><span class=\\"mord\\">1</span><span class=\\"mrel\\">=</span>
+      <span
+      class=\\"mord\\">2</span>
+        </span>
+        </span>
+        </span>bar</p>"
+`;
+
+exports[`markdown-it-katex Inline blockmath is not (currently) registered. 1`] = `"<p>It's well know that $$1 + 1 = 3$$ for sufficiently large 1.</p>"`;
+
+exports[`markdown-it-katex Inline math with apparent markup should not be processed 1`] = `
+"<p>foo <span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn><mo>∗</mo><mi>i</mi><mo>∗</mo><mn>1</mn></mrow><annotation encoding=\\"application/x-tex\\">1 *i* 1</annotation></semantics></math></span>
+  <span
+  class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.65952em;\\"></span><span class=\\"strut bottom\\"
+    style=\\"height:0.65952em;vertical-align:0em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span>
+    <span
+    class=\\"mbin\\">∗</span><span class=\\"mord mathit\\">i</span><span class=\\"mbin\\">∗</span>
+      <span
+      class=\\"mord\\">1</span>
+        </span>
+        </span>
+        </span>bar</p>"
+`;
+
+exports[`markdown-it-katex Multiline display math 1`] = `
+"<p><span class=\\"katex-display\\"><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding=\\"application/x-tex\\">
+  1
++ 1
+
+= 2
+
+</annotation></semantics></math></span><span class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span>
+  <span
+  class=\\"strut bottom\\" style=\\"height:0.72777em;vertical-align:-0.08333em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span><span class=\\"mbin\\">+</span>
+    <span
+    class=\\"mord\\">1</span><span class=\\"mrel\\">=</span><span class=\\"mord\\">2</span></span>
+      </span>
+      </span>
+      </span>
+</p>"
+`;
+
+exports[`markdown-it-katex Multiline inline math 1`] = `
+"<p>foo <span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding=\\"application/x-tex\\">1 + 1
+= 2</annotation></semantics></math></span><span class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span>
+  <span
+  class=\\"strut bottom\\" style=\\"height:0.72777em;vertical-align:-0.08333em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span><span class=\\"mbin\\">+</span>
+    <span
+    class=\\"mord\\">1</span><span class=\\"mrel\\">=</span><span class=\\"mord\\">2</span></span>
+      </span>
+      </span>bar</p>"
+`;
+
+exports[`markdown-it-katex Multiple escaped delimiters in math module 1`] = `"<p>Weird-o: $displaystyle{egin{pmatrix} $ &amp; 1$ end{pmatrix}}$.</p>"`;
+
+exports[`markdown-it-katex No whitespace before and after is fine 1`] = `
+"<p>foo<span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding=\\"application/x-tex\\">1+1 = 2</annotation></semantics></math></span>
+  <span
+  class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span><span class=\\"strut bottom\\"
+    style=\\"height:0.72777em;vertical-align:-0.08333em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span>
+    <span
+    class=\\"mbin\\">+</span><span class=\\"mord\\">1</span><span class=\\"mrel\\">=</span><span class=\\"mord\\">2</span></span>
+      </span>
+      </span>bar</p>"
+`;
+
+exports[`markdown-it-katex Numbers can not follow closing inline math 1`] = `"<p>Thus, $20,000 and USD$30,000 won't parse as math.</p>"`;
+
+exports[`markdown-it-katex Or on multiple lines with expression starting and ending on delimited lines 1`] = `
+"<p><span class=\\"katex-display\\"><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mo>[</mo><mo>[</mo><mn>1</mn><mo separator=\\"true\\">,</mo><mn>2</mn><mo>]</mo><mo>[</mo><mn>3</mn><mo separator=\\"true\\">,</mo><mn>4</mn><mo>]</mo><mo>]</mo></mrow><annotation encoding=\\"application/x-tex\\">[
+[1, 2]
+[3, 4]
+]</annotation></semantics></math></span><span class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.75em;\\"></span>
+  <span
+  class=\\"strut bottom\\" style=\\"height:1em;vertical-align:-0.25em;\\"></span><span class=\\"base\\"><span class=\\"mopen\\">[</span><span class=\\"mopen\\">[</span>
+    <span
+    class=\\"mord\\">1</span><span class=\\"mpunct\\">,</span><span class=\\"mord\\">2</span>
+      <span
+      class=\\"mclose\\">]</span><span class=\\"mopen\\">[</span><span class=\\"mord\\">3</span><span class=\\"mpunct\\">,</span>
+        <span
+        class=\\"mord\\">4</span><span class=\\"mclose\\">]</span><span class=\\"mclose\\">]</span></span>
+          </span>
+          </span>
+          </span>
+</p>"
+`;
+
+exports[`markdown-it-katex Paragraph break in inline math is not allowed 1`] = `
+"<p>foo $1+1</p>
+<p>= 2$ bar</p>"
+`;
+
+exports[`markdown-it-katex Require non whitespace to left of closing inline math. 1`] = `"<p>I will give you $20 today, if you give me more $ tomorrow.</p>"`;
+
+exports[`markdown-it-katex Require non whitespace to right of opening inline math 1`] = `"<p>For some Europeans, it is 2$ for a can of soda, not 1$.</p>"`;
+
+exports[`markdown-it-katex Should require a closing delimiter 1`] = `"<p>aaa $5.99 bbb</p>"`;
+
+exports[`markdown-it-katex Shouldn't render empty content 1`] = `"<p>aaa $$ bbb</p>"`;
+
+exports[`markdown-it-katex Simple block math 1`] = `
+"<p><span class=\\"katex-display\\"><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding=\\"application/x-tex\\">1+1 = 2
+</annotation></semantics></math></span><span class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span>
+  <span
+  class=\\"strut bottom\\" style=\\"height:0.72777em;vertical-align:-0.08333em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span><span class=\\"mbin\\">+</span>
+    <span
+    class=\\"mord\\">1</span><span class=\\"mrel\\">=</span><span class=\\"mord\\">2</span></span>
+      </span>
+      </span>
+      </span>
+</p>"
+`;
+
+exports[`markdown-it-katex Simple inline math 1`] = `
+"<p><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding=\\"application/x-tex\\">1+1 = 2</annotation></semantics></math></span>
+  <span
+  class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.64444em;\\"></span><span class=\\"strut bottom\\"
+    style=\\"height:0.72777em;vertical-align:-0.08333em;\\"></span><span class=\\"base\\"><span class=\\"mord\\">1</span>
+    <span
+    class=\\"mbin\\">+</span><span class=\\"mord\\">1</span><span class=\\"mrel\\">=</span><span class=\\"mord\\">2</span></span>
+      </span>
+      </span>
+</p>"
+`;
+
+exports[`markdown-it-katex Text can immediately follow inline math 1`] = `
+"<p><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding=\\"application/x-tex\\">n</annotation></semantics></math></span>
+  <span
+  class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"strut\\" style=\\"height:0.43056em;\\"></span><span class=\\"strut bottom\\"
+    style=\\"height:0.43056em;vertical-align:0em;\\"></span><span class=\\"base\\"><span class=\\"mord mathit\\">n</span></span>
+    </span>
+    </span>-th order</p>"
+`;
