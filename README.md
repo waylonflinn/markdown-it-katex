@@ -1,4 +1,4 @@
-# markdown-it-katex
+# markdown-it-mathtex
 
 Add Math to your Markdown
 

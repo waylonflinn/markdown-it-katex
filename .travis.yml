@@ -1,6 +1,4 @@
 language: node_js
 node_js:
-  - "5"
-  - "4"
-  - "4.4.3" # LTS
-  - "4.3.2" # amazon lambda
+  - "10"
+  - "8"
