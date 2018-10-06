@@ -1,8 +1,8 @@
-# markdown-it-katex
+# markdown-it-mathtex
 
 Add Math to your Markdown
 
-[![Build Status](https://travis-ci.org/waylonflinn/markdown-it-katex.svg?branch=master)](https://travis-ci.org/waylonflinn/markdown-it-katex)
+[![Build Status](https://travis-ci.org/anhngd/markdown-it-mathtex.svg?branch=master)](https://travis-ci.org/anhngd/markdown-it-mathtex)
 
 [KaTeX](https://github.com/Khan/KaTeX) is a faster alternative to MathJax. This plugin makes it easy to support in your markdown.
 
@@ -37,12 +37,12 @@ var result = md.render('# Math Rulez! \n  $\\sqrt{3x-1}+(1+x)^2$');
 
 Include the KaTeX stylesheet in your html:
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
 ```
 
 If you're using the default markdown-it parser, I also recommend the [github stylesheet](https://github.com/sindresorhus/github-markdown-css):
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.css"/>
 ```
 
 `KaTeX` options can be supplied with the second argument to use.
