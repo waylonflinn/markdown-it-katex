@@ -6,21 +6,22 @@ var path = require('path'),
 var md = require('markdown-it')()
 	.use(mdk);
 
+const { toPrintedString } = require('./helpers');
+
 /* this uses the markdown-it-testgen module to automatically generate tests
    based on an easy to read text file
  */
-testLoad(path.join(__dirname, 'fixtures/default.txt'), function(data){
-	data.fixtures.forEach(function (fixture){
+testLoad(path.join(__dirname, 'fixtures/default.txt'), function (data) {
+	data.fixtures.forEach(function (fixture) {
 
 		/* generic test definition code using tape */
-		tape(fixture.header, function(t){
+		tape(fixture.header, function (t) {
 			t.plan(1);
 
 			var expected = fixture.second.text,
 				actual = md.render(fixture.first.text);
 
-			t.equals(actual, expected);
-
+			t.equals(toPrintedString(actual), expected);
 		});
 
 	});
