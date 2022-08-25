@@ -11,6 +11,7 @@ for rendering output.
 'use strict';
 
 var katex = require('katex');
+require('katex/contrib/mhchem');
 
 // Test if potential opening or closing delimieter
 // Assumes that there is a "$" at state.src[pos]
