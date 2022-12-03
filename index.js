@@ -155,18 +155,13 @@ function math_block(state, start, end, silent){
 module.exports = function math_plugin(md, options) {
     // Default options
 
-    options = options || {};
+    options = options ?? {};
+    options.throwOnError ??= false;
 
     // set KaTeX as the renderer for markdown-it-simplemath
     var katexInline = function(latex){
         options.displayMode = false;
-        try{
-            return katex.renderToString(latex, options);
-        }
-        catch(error){
-            if(options.throwOnError){ console.log(error); }
-            return latex;
-        }
+        return katex.renderToString(latex, options);
     };
 
     var inlineRenderer = function(tokens, idx){
@@ -175,17 +170,11 @@ module.exports = function math_plugin(md, options) {
 
     var katexBlock = function(latex){
         options.displayMode = true;
-        try{
-            return "<p>" + katex.renderToString(latex, options) + "</p>";
-        }
-        catch(error){
-            if(options.throwOnError){ console.log(error); }
-            return latex;
-        }
+        return "<p>" + katex.renderToString(latex, options) + "</p>";
     }
 
     var blockRenderer = function(tokens, idx){
-        return  katexBlock(tokens[idx].content) + '\n';
+        return katexBlock(tokens[idx].content) + '\n';
     }
 
     md.inline.ruler.after('escape', 'math_inline', math_inline);

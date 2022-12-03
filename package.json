@@ -1,11 +1,11 @@
 {
   "name": "markdown-it-katex",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Fast math support for markdown-it with KaTeX",
   "main": "index.js",
   "scripts": {
     "watch": "watchify browser.js -o bundle.js -v",
-    "test": "node test/all.js"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",
@@ -22,11 +22,11 @@
   "author": "waylonflinn@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "katex": "^0.6.0"
+    "katex": "^0.16.0"
   },
   "devDependencies": {
-    "markdown-it": "^6.0.0",
-    "markdown-it-testgen": "^0.1.4",
-    "tape": "^4.5.1"
+    "markdown-it": "^13.0.0",
+    "markdown-it-testgen": "^0.1.0",
+    "tape": "^5.6.0"
   }
 }

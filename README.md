@@ -45,9 +45,11 @@ If you're using the default markdown-it parser, I also recommend the [github sty
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 ```
 
-`KaTeX` options can be supplied with the second argument to use.
+By default KaTeX is in `throwOnError:false` mode, unlike its upstream
+behavior.  KaTeX options can be supplied with the second argument to `use`.
+
 ```javascript
-md.use(mk, {"throwOnError" : false, "errorColor" : " #cc0000"});
+md.use(mk, {errorColor: "#cc0000"});
 ```
 
 ## Examples
@@ -59,8 +61,8 @@ $\sqrt{3x-1}+(1+x)^2$
 ```
 
 ### Block
-Use two (`$$`) for block rendering. This mode uses bigger symbols and centers
-the result.
+Use two (`$$`) for block rendering. This mode uses bigger symbols and
+centers the result.
 
 ```
 $$\begin{array}{c}
@@ -92,3 +94,21 @@ KaTeX is based on TeX and LaTeX. Support for both is growing. Here's a list of
 currently supported functions:
 
 [Function Support in KaTeX](https://github.com/Khan/KaTeX/wiki/Function-Support-in-KaTeX)
+
+## News
+
+### Version 2.1.0
+
+ * KaTeX dependency updated to 0.16.x — fixes many rendering
+   problems.
+
+ * Behavior change from 2.0.3 and earlier: by default KaTeX is in
+   `throwOnError:false` mode.  This means KaTeX is responsible for the
+   rendering of syntactically invalid math as well as valid math.
+
+   If you set `throwOnError:true`, markdown-it-katex **will not**
+   catch the exception. You are responsible for handling invalid math
+   in this case.
+
+   This change fixes the XSS-with-invalid-math-markup bugs reported
+   against 2.0.3 and earlier.
